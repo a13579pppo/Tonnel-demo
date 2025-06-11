@@ -1,0 +1,151 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #141414;
+  color: #eee;
+  margin: 0;
+  padding: 0 20px 50px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #58cc02;
+  font-weight: 900;
+  user-select: none;
+}
+
+button {
+  background-color: #58cc02;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #46a301;
+}
+
+#walletInfo {
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+#filters {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  background-color: #333;
+  color: #ccc;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+.filterBtn.active, .filterBtn:hover {
+  background-color: #58cc02;
+  color: #111;
+}
+
+#nftGallery, #favoritesGallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 18px;
+}
+
+.nftCard {
+  background: #222;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 0 12px rgba(88, 204, 2, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.nftCard:hover {
+  transform: scale(1.05);
+}
+
+.nftImage {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-bottom: 2px solid #58cc02;
+  background: #111;
+}
+
+.nftName {
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  text-align: center;
+  flex-grow: 1;
+  color: #ccc;
+}
+
+.favoriteBtn {
+  background: none;
+  border: none;
+  color: #58cc02;
+  font-size: 1.3rem;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+  user-select: none;
+}
+
+.favoriteBtn.active {
+  color: #fff100;
+}
+
+#favoritesSection {
+  margin-top: 40px;
+}
+
+#transferSection {
+  margin-top: 40px;
+  background: #222;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+#transferSection input {
+  width: calc(100% - 22px);
+  margin-bottom: 10px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  background: #333;
+  color: #eee;
+}
+
+#transferStatus {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #58cc02;
+  min-height: 22px;
+}
